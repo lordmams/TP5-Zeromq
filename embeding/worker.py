@@ -13,11 +13,10 @@ def get_embedding(sentences):
 context = zmq.Context()
 
 receiver = context.socket(zmq.PULL)
-receiver.connect("tcp://localhost:5556") 
+receiver.connect("tcp://25.30.255.204:5556") 
 
 sender = context.socket(zmq.PUSH)
-sender.connect("tcp://localhost:5557")  
-
+sender.connect("tcp://25.30.255.204:5557")
 print("Worker is ready to process tasks.")
 
 while True:
